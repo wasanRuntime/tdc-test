@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+header{
+    height: 20vh;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 10px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    text-transform: uppercase;
+}
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.nav-side-right{
+  margin-left:auto;
+}
+/*.home-banner{
+  display: flex;
+  justify-content: center;
+}
+.home-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    text-align: center;
+}*/
+h2{
+    font-size: 60px;
+    text-align: center;
+}
+h3{
+    font-size: 30px;
+    text-align: center;
+}
+/*.btn-primary{
+  display: inline-block;
+  padding: 20px 100px;
+  margin: 0px 40px 80px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4285F4;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}*/
+/*
+    /* Custom Styles for the Car Showroom Website */
+  
+  
+    /* Navigation */
+    .navbar {
+      background-color: #ffffff;
+    }
+  
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    .nav-item {
+      margin-right: 20px;
+    }
+  
+    /* Hero Section */
+    .hero {
+      height: 200px;
+    }
+  
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+  
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  
+    /* Featured Story Section */
+    .featured-story {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+  
+    .featured-story h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .featured-card {
+      border: none;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+      background-color: transparent;
+    }
+  
+    .featured-card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .featured-card img {
+      max-height: 200px;
+      margin: auto;
+    }
+  
+    .featured-card .card-title {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  
+    .featured-card img {
+      height: 200px;
+      /* Adjust this value as needed */
+      object-fit: cover;
+      /* Maintain aspect ratio and cover entire space */
+    }
+  
+    .featured-card .card-text {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  
+    .featured-card .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      margin-top: 20px;
+    }
+  
+    .featured-card .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  
+    /* Footer */
+    .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+    }
+  
+    .footer p {
+      margin: 0;
+    }
+*/
+
+/*Contact Us Page
+     /* Contact Form Styles */
+     .contact-form {
+       margin-top: 50px;
+     }
+  
+     .contact-form label {
+       font-weight: bold;
+     }
+  
+     .contact-form input[type="text"],
+     .contact-form input[type="email"],
+     .contact-form textarea {
+       width: 100%;
+       padding: 10px;
+       margin-bottom: 15px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       box-sizing: border-box;
+     }
+  
+     .contact-form textarea {
+       resize: vertical;
+       min-height: 150px;
+     }
+  
+     .contact-form button {
+       color: white;
+       border: none;
+       border-radius: 4px;
+       padding: 10px 20px;
+       cursor: pointer;
+     }
+  
+     .contact-form button:hover {
+       background-color: #0056b3;
+     }
+
+
+/*Car.html*/
+     /* Hero Section Styles */
+     .hero-section {
+       position: relative;
+       height: 500px;
+       /* Fixed height */
+       overflow: hidden;
+     }
+  
+     .banner_video {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       z-index: -1;
+     }
+
+.card-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.card {
+  flex: 0 0 300px;
+  height: 300px;
+  margin: 10px;
+  background-color: #f1f1f1;
+  scroll-snap-align: start;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 0;
+}
+.icon{
+    width: 120px;
+    height: 120px;
+}
+.type{
+    font-size: 20px;
+}
+.make{
+    font-size: 20px;
+}
+#banner{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+.search{
+    text-align: center;
+    display:flex;
+    float: center;
+}
+.swiper{
+    width: 80%;
+    height: 300px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    margin-top: 100px;
+    
+}
+.carimg{
+    height: 200px;
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.card-item {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+  }
+  
+  .card-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+
+  #explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #search_bar {
+    width: 30%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    margin: 45px 0;
+  }
+
+  #car_type {
+    width: 70%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 90px 0;
+  }
+
+  #car_type li {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #car_type li {
+    width: 100%;
+    text-align: center;
+  }
+  #car_makes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#car_makes h3 {
+    margin: 20px 0;
+}
+
+  #multi-column {
+    list-style: none;
+    columns: 6;
+    padding-left: 250px;
+  }
+
+  #multi-column li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+  }
+
+  #multi-column li>span {
+    margin-left: 10px;
+  }
+  .topnav{
+    padding-bottom: 0px;
+    background-color: #080808;
+  }
+  .back-button {
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+    padding-top: 0px;
+    
+}
+.back-button::before {
+    content: "< ";
+}
+.buy-title{
+  font-size: 45px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  
+}
+.yes-button{
+  display: inline-block;
+  padding: 20px 100px;
+  margin: 0px 40px 80px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4285F4;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+.no-button{
+  display: inline-block;
+  padding: 20px 100px;
+  margin: 0px 40px 80px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4285F4;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
